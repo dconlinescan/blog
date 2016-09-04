@@ -3,7 +3,7 @@
 ## 系统工具
 
 | 软件 | 描述 |
-| -- | -- |
+| :-- | :-- |
 | 邮件 | Mail [系统自带] |
 | office | Pages、Numbers、Keynote |
 | 交流 | QQ、[Baidu Hi](http://i.im.baidu.com) |
@@ -18,7 +18,7 @@
 ## 开发工具
 
 | 软件 | 描述 |
-| -- | -- |
+| :-- | :-- |
 | iTerm2 | 强大的终端，[rz sz命令](http://www.tuicool.com/articles/IB7bUjJ) |
 | Xcode Command Line Tools | 包括：svn、git等等 |
 | Homebrew | OS X上的包管理器 |
@@ -33,7 +33,7 @@
 ## 开发环境
 
 | 环境 | 描述 |
-| -- | -- |
+| :-- | :-- |
 | nginx | - |
 | Java Runtime Environment | java运行 |
 | php、php-cgi | - |
