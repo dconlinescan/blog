@@ -6,6 +6,7 @@
 
 * 工程实践
     - [前端研发思路](engineering/front-end-dev.md)
+    - [index模块重构](engineering/index-rebuild.md)
 * linux
     - [mac装机](linux/mac.md)
 * nginx
