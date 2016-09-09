@@ -11,3 +11,5 @@
     - [mac装机](linux/mac.md)
 * nginx
     - [安装配置](nginx/config.md)
+* mysql
+    - [起步](mysql/start.md)
