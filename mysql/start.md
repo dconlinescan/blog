@@ -36,23 +36,16 @@
 
 ### 安装
 
-**linux CentOS下安装**
+**linux CentOS7下安装**
 
 ```
-# 通过yum安装
-yum install -y mysql mysql-server mysql-deve
-
-# mysql，mysql客户端
-# mysql-server、mysql-deve，mysql服务端
+# 通过yum安装，MariaDB是MySQL的一个分支，完全兼容MySQL
+yum install mariadb-server mariadb
 ```
 
 ```
 # 启动
-service mysqld start
-
-# 重启
-service mysqld restart
-```
+systemctl start mariadb
 
 **mac下安装**
 
@@ -74,10 +67,17 @@ mysql.server start
 
 ### 配置
 
-**创建root密码**
+**root账号登录**
 
 ```
-mysqladmin -u root password "新密码"
+mysql -u root -p
+```
+
+**设置root密码**
+
+```
+# 默认root密码为空
+set password for 'root'@'localhost' =password('password');
 ```
 
 ### 增
@@ -92,9 +92,5 @@ create database 数据库名 [选项];
 # 选中数据库
 use 数据库名;
 ```
-
-
-
-
 
 > 创建：皮成，2016-09-10
