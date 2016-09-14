@@ -46,6 +46,7 @@ yum install mariadb-server mariadb
 ```
 # 启动
 systemctl start mariadb
+```
 
 **mac下安装**
 
