@@ -10,7 +10,7 @@
 * mac
     - [mac装机](mac/index.md)
 * linux
-    - [监控工具](monitor.md)
+    - [监控工具](linux/monitor.md)
 * nginx
     - [安装配置](nginx/config.md)
 * mysql
