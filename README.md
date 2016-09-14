@@ -7,8 +7,10 @@
     - [index模块重构](engineering/index-rebuild.md)
 * 移动端
     - [User-Agent](mobile/ua.md)
+* mac
+    - [mac装机](mac/index.md)
 * linux
-    - [mac装机](linux/mac.md)
+    - [监控工具](monitor.md)
 * nginx
     - [安装配置](nginx/config.md)
 * mysql

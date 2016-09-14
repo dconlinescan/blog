@@ -70,4 +70,31 @@ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --
 mysql.server start
 ```
 
+## 操作
+
+### 配置
+
+**创建root密码**
+
+```
+mysqladmin -u root password "新密码"
+```
+
+### 增
+
+**创建数据库**
+
+```
+create database 数据库名 [选项];
+```
+
+```
+# 选中数据库
+use 数据库名;
+```
+
+
+
+
+
 > 创建：皮成，2016-09-10
