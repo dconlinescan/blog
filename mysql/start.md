@@ -40,7 +40,7 @@
 
 **语句**
 
-MySQL脚本的基本组成单位，每条语句完成特定的操作。
+MySQL脚本的基本组成单位，每条语句完成特定的操作，语句以分号`;`结束。
 
 **标识符**
 
@@ -104,13 +104,13 @@ set password for 'root'@'localhost' =password('password');
 ### 执行mysql脚本
 
 ```
-# 命令行下执行
-mysql -u root -p < 脚本文件路径
+# 命令行下执行，脚本文件在当前目录可直接写文件名，否则需要写完整路径
+mysql -u root -p < hello.sql
 ```
 
 ```
-# 进行mysql控制台执行
-source 脚本文件路径;
+# 进入mysql控制台执行，脚本文件在当前目录可直接写文件名，否则需要写完整路径
+source hello.sql;
 ```
 
 ### 增
@@ -119,11 +119,34 @@ source 脚本文件路径;
 
 ```
 create database 数据库名 [选项];
+
+# 如
+create database videos;
 ```
 
 ```
 # 选中数据库
 use 数据库名;
+
+# 如
+use videos;
+```
+
+**创建数据表**
+
+```
+# 括号内为各列的名称和数据类型描述，各列之间用逗号`,`分隔
+create table table_name (columns);
+```
+
+```
+create table movie (
+    id int unsigned not null primary key,
+    title text not null,
+    intro text not null,
+    date text not null,
+    rating int not null
+);
 ```
 
 > 创建：皮成，2016-09-10
