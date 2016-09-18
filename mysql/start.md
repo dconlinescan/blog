@@ -144,9 +144,9 @@ create table movie (
     id int unsigned not null primary key,
     title text not null,
     intro text not null,
-    date text not null,
+    date year not null,
     rating int not null
-);
+) charste = utf8;
 ```
 
 | 数据类型 | 描述 |
@@ -155,5 +155,20 @@ create table movie (
 | text | 字符串，最多65535个字符 |
 | not null | 值不能为空 |
 | primary key | 主键 |
+
+**向表中插入数据**
+
+```
+insert [into] 表名 [(列名1, 列名2, ...)] values (值1, 值2, ...);
+```
+
+```
+insert into movie (id, title, intro, date, rating) valuse (121745, '叶问3', '又一武林力作！', 2016, 64);
+```
+
+```
+# 列名是可选的
+insert into movie valuse (26542, '青蛇', '二蛇与法海', 1993, 85);
+```
 
 > 创建：皮成，2016-09-10
