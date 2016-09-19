@@ -156,7 +156,7 @@ create table movie (
 | not null | 值不能为空 |
 | primary key | 主键 |
 
-**向表中插入数据**
+**添加一行数据**
 
 ```
 insert [into] 表名 [(列名1, 列名2, ...)] values (值1, 值2, ...);
@@ -169,6 +169,67 @@ insert into movie (id, title, intro, date, rating) valuse (121745, '叶问3', '�
 ```
 # 列名是可选的
 insert into movie valuse (26542, '青蛇', '二蛇与法海', 1993, 85);
+```
+
+**添加列**
+
+```
+alter table 表名 add 列名 列数据类型 [插入位置];
+```
+
+```
+alter table movie add actor char(30);
+```
+
+```
+# 插入到名为title的列后面
+alter table movie add actor char(30) after title;
+```
+
+### 删
+
+**删除数据库**
+
+```
+drop database 数据库名;
+```
+
+```
+drop database videos;
+```
+
+**删除表**
+
+```
+drop table 表名;
+```
+
+```
+drop table movie;
+```
+
+**删除列**
+
+```
+alter table 表名 drop 列名;
+```
+
+```
+alter table movie drop rating;
+```
+
+**删除行**
+
+```
+delete from 表名称 where 删除条件;
+```
+
+```
+delete from movie where id=26542;
+```
+
+```
+delete from movie where rating<80;
 ```
 
 > 创建：皮成，2016-09-10
