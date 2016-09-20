@@ -1,6 +1,6 @@
 # MySQL起步
 
-### MySQL关键概念
+## MySQL关键概念
 
 **数据库**
 
@@ -54,7 +54,7 @@ MySQL脚本的基本组成单位，每条语句完成特定的操作，语句以
 
 实现数据库操作的一些高级功能，包括：字符串函数、数学函数、日期时间函数、搜索函数、加密函数、信息函数。
 
-### 安装
+## 安装
 
 **linux CentOS7下安装**
 
@@ -128,7 +128,7 @@ create database videos;
 # 选中数据库
 use 数据库名;
 
-# 如
+# 选中名为videos的数据库
 use videos;
 ```
 
@@ -140,6 +140,7 @@ create table table_name (columns);
 ```
 
 ```
+# 创建名为movie的表
 create table movie (
     id int unsigned not null primary key,
     title text not null,
@@ -163,6 +164,7 @@ insert [into] 表名 [(列名1, 列名2, ...)] values (值1, 值2, ...);
 ```
 
 ```
+# 在movie表中添加一行数据
 insert into movie (id, title, intro, date, rating) valuse (121745, '叶问3', '又一武林力作！', 2016, 64);
 ```
 
@@ -178,11 +180,12 @@ alter table 表名 add 列名 列数据类型 [插入位置];
 ```
 
 ```
+# 在movie表中添加名为actor的列
 alter table movie add actor char(30);
 ```
 
 ```
-# 插入到名为title的列后面
+# 在movie表title列后添加名为actor的列
 alter table movie add actor char(30) after title;
 ```
 
@@ -195,6 +198,7 @@ drop database 数据库名;
 ```
 
 ```
+# 删除videos数据库
 drop database videos;
 ```
 
@@ -205,6 +209,7 @@ drop table 表名;
 ```
 
 ```
+# 删除movie表
 drop table movie;
 ```
 
@@ -215,6 +220,7 @@ alter table 表名 drop 列名;
 ```
 
 ```
+# 删除movie表中的rating列
 alter table movie drop rating;
 ```
 
@@ -225,11 +231,94 @@ delete from 表名称 where 删除条件;
 ```
 
 ```
+# 删除moive表中id=26542的行
 delete from movie where id=26542;
 ```
 
 ```
+# 删除moive表中评分小于80的行
 delete from movie where rating<80;
+```
+
+### 改
+
+**重命名表**
+
+```
+alter table 表名 rename 新表名;
+```
+
+```
+# 表 movie 更名为 tvplay
+alter table tv rename tvplay;
+```
+
+**修改列**
+
+```
+alter table 表名 change 列名 新列名 数据类型;
+```
+
+```
+# 列 intro 更名为 s_intro
+alter table movie change intro s_intro char(30);
+```
+
+**更新数据**
+
+```
+update 表名称 set 列名称=值 where 更新条件;
+```
+
+```
+# 将movie表中id为26542的行，评分值改为80
+update movie set rating=80 where id=26542;
+```
+
+```
+# 将movie表中所有行的评分值改为80
+update movie set rating=80;
+```
+
+### 查
+
+**查看已创建的数据库**
+
+```
+show databases;
+```
+
+**查看当前数据库中已创建的表**
+
+```
+show tables;
+```
+
+**查看表中的所有字段**
+
+```
+show full columns from 表名;
+```
+
+```
+# 查看movie表中的所有字段信息
+show full colunms from movie;
+```
+
+**查询表中的数据**
+
+```
+select 列名 from 表名 [查询条件];
+```
+
+```
+# 查询movie表中评分大于80的id列数据
+select id from movie rating>80;
+```
+
+```
+# 查询movie表中评分大于80的所有列数据
+select * from movie rating>80;
 ```
 
 > 创建：皮成，2016-09-10
